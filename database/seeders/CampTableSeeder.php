@@ -19,6 +19,7 @@ class CampTableSeeder extends Seeder
         $camps = [
             [
             'title'         => 'Gila Belajar',
+            'description'   => 'Bootcamp berdurasi 6 bulan, bootcamp akan mengajak Anda untuk belajar penuh mulai dari pengenalan dasar sampai membangun sebuah projek asli bernilai ratusan juta',
             'slug'          => 'gila-belajar',
             'price'         => '199',
             'created_at'    => date('Y-m-d H:i:s', time()),
@@ -27,6 +28,7 @@ class CampTableSeeder extends Seeder
             [
             'title'         => 'Baru Mulai',
             'slug'          => 'baru-mulai',
+            'description'   => 'Bootcamp berdurasi 2-3 bulan, bootcamp akan mengajak Anda untuk belajar dari dasar hingga menengah, fokus pada bidang yang ingin Anda kuasai',
             'price'         => '129',
             'created_at'    => date('Y-m-d H:i:s', time()),
             'updated_at'    => date('Y-m-d H:i:s', time()),
