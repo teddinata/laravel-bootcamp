@@ -33,7 +33,7 @@ class CheckoutController extends Controller
 
         if ($camp->isRegistered) {
             $request->session()->flash('error', "Kamu sudah terdaftar di Bootcamp {$camp->title}.");
-            return redirect (route('dashboard'));
+            return redirect (route('user.dashboard'));
         }
 
         return view('checkout.create', [
