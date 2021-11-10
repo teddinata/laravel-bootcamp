@@ -12,6 +12,8 @@ class HomeController extends Controller
     {
         $checkouts = Checkout::with('Camp')->whereUserId(Auth::id())->get();
         // return $checkouts;
-        return view('user.dashboard');
+        return view('user.dashboard', [
+            'checkouts' => $checkouts
+        ]);
     }
 }
