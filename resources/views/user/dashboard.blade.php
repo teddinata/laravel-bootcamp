@@ -34,10 +34,11 @@
                                 <strong>IDR{{ $checkout->Camp->price }}k</strong>
                             </td>
                             <td>
-                                @if ($checkout->is_paid)
-                                    <strong class="text-success">Paid</strong>
-                                @else
-                                    <strong>Waiting for Payment</strong>
+                                <strong class="text-success">{{ $checkout->payment_status }}</strong>
+                            </td>
+                            <td>
+                                @if ($checkout->payment_status == 'waiting')
+                                    <a href="{{ $checkout->midtrans_url }}" class="btn btn-warning">Bayar Di sini</a>
                                 @endif
                             </td>
                             <td>
@@ -54,7 +55,7 @@
                     @empty
                         <tr>
                             <td colspan="5">
-                                <h3>No Data</h3>
+                                <h3>Anda belum terdaftar di Bootcamp manapun</h3>
                             </td>
                         </tr>
                     @endforelse

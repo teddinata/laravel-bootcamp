@@ -220,6 +220,20 @@ body {
   background: #31B380;
 }
 
+.btn-warning {
+    background: #eede07;
+    color: #000;
+    padding: 11px 36px 11px 36px;
+    border-radius: 100px;
+    border: 0;
+    font-weight: 500;
+    margin-right: -80px;
+  }
+.btn-warning:hover {
+    background: #fff45d;
+    color: #000;
+  }
+
 .story {
   font-weight: 600;
   font-size: 16px;
