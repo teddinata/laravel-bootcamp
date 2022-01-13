@@ -32,8 +32,8 @@ Route::get('checkout/{camp:slug}', [CheckoutController::class, 'create'])->name(
 Route::post('checkout/{camp}', [CheckoutController::class, 'store'])->name('checkout.store');
 
 //midtrans routes
-Route::get('payment/success', [UserController::class, 'midtransCallback']);
-Route::post('payment/success', [UserController::class, 'midtransCallback']);
+Route::get('payment/success', [CheckoutController::class, 'midtransCallback']);
+Route::post('payment/success', [CheckoutController::class, 'midtransCallback']);
 
 Route::middleware(['auth'])->group(function () {
 
