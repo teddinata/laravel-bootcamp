@@ -42,7 +42,7 @@
                                 </tr>
                             @empty
                                 <tr>
-                                    <td colspan="3">
+                                    <td colspan="6">
                                         No Camp Registered
                                     </td>
                                 </tr>
