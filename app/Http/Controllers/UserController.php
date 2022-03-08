@@ -23,7 +23,9 @@ class UserController extends Controller
 
     public function handleProviderCallback()
     {
-       $callback = Socialite::driver('google')->stateless()->user();
+       $callback = Socialite::driver('google')->stateless()
+                    ->setHttpClient(new \GuzzleHttp\Client(['verify' => true]))
+                    ->user();
        $data = [
            'name'               => $callback->getName(),
            'email'              => $callback->getEmail(),

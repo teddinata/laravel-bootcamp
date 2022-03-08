@@ -16,7 +16,7 @@
                                 <th>User</th>
                                 <th>Camp</th>
                                 <th>Price</th>
-                                <th>Register Data</th>
+                                <th>Start Date</th>
                                 <th>Paid Status</th>
 
                             </tr>
@@ -31,7 +31,12 @@
                                         {{ $checkout->Camp->title }}
                                     </td>
                                     <td>
-                                        {{ $checkout->Camp->price }}
+                                        <strong>
+                                            IDR{{ $checkout->total }}
+                                            @if($checkout->discount_id)
+                                                <span class="badge bg-success">Disc {{ $checkout->discount_percentage }}%</span>
+                                            @endif
+                                        </strong>
                                     </td>
                                     <td>
                                         {{ $checkout->created_at->format('M d, Y') }}
